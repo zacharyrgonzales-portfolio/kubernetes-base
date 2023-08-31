@@ -6,5 +6,5 @@ Base configuration for kubernetes home lab.
 
 1. Clone this repository:
    ```bash
-   sh ./create_cluster.sh
+   sh ./kind/create_cluster.sh
    ```
