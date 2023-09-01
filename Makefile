@@ -6,7 +6,7 @@ create-cluster: ## run kind to create a k8s cluster
 	kind create cluster
 
 lint-manifests: ## run lint on kubenetes manifests
-	find . -type f -regex '.*\.ya*ml' ! -path '*/.codefresh/*' ! -path '*/helm/*' ! -path '*/bootstrap/*' ! -path '*/helm-seedling/*' ! -path '*/bootstrap-seedling/*' |xargs kubeval --ignore-missing-schemas
+	find . -type f -regex '.*\.ya*ml' ! -path '*/apps/*' ! -path '*/bootstrap/*' ! -path '*/projects/*' |xargs kubeval --ignore-missing-schemas
 
 check-argocd-autopilot-env-vars: ## check for correct argocd autopilot environment variables
 ifndef GIT_TOKEN
