@@ -9,15 +9,20 @@ There are three directories; apps, bootstrap, and projects
 ```
 kubernetes-base
 ├── apps
-│   ├── app1
-│   ├── app2
-│   └── app3
+│   ├── vault
+│   ├── harbor
+│   ├── prometheus
+│   └── grafana
 ├── bootstrap
 │   ├── argo-cd
 │   └── cluster-resources
 └── projects
-    ├── project1 
-    └── project2
+    ├── security
+    ├── monitoring
+    ├── shared services
+    ├── networking
+    ├── data & analytics
+    └── backup/dr
 ```
 
 The apps directory will house all argocd applications, and the the projects directory will house all argocd projects. Projects provide a way to logically group applications and easily control things such as defaults and restrictions.
